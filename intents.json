@@ -188,6 +188,17 @@
     },
 
     {
+  "patterns": [
+    "python example",
+    "example of python code",
+    "show python code",
+    "hello world program",
+    "python sample program"
+  ],
+  "response": "Example Python Program:\n\nprint('Hello World')"
+  },
+
+    {
       "patterns": ["ok bye","bye"],
       "response": "Goodbye Student! Happy Coding."
     }

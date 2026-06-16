@@ -19,25 +19,23 @@ def get_response(message):
     message = preprocess_text(message)
 
     personal_keywords = [
-        "you",
-        "your",
-        "yourself",
-        "personal",
-        "age",
-        "phone",
-        "password",
-        "family",
-        "where do you live"
+        "your age",
+        "your phone",
+        "your password",
+        "your family",
+        "where do you live",
+        "personal details"
     ]
 
-    for word in personal_keywords:
-        if word in message:
+    for keyword in personal_keywords:
+        if keyword in message:
             return (
-                "I am PyTutor Assistant.\n\n"
+                "I am PyTutor Assistant. "
                 "I cannot share personal details, "
                 "but I can help you learn Python programming."
             )
 
+    # First: Exact match
     for intent in data["intents"]:
         patterns = intent.get("patterns", [])
         response = intent.get("response", "")
@@ -45,21 +43,32 @@ def get_response(message):
         for pattern in patterns:
             pattern = preprocess_text(pattern)
 
-            # Improved matching
-            if pattern in message or message in pattern:
+            if pattern == message:
+                return response
+
+    # Second: Partial match only for multi-word patterns
+    for intent in data["intents"]:
+        patterns = intent.get("patterns", [])
+        response = intent.get("response", "")
+
+        for pattern in patterns:
+            pattern = preprocess_text(pattern)
+
+            if len(pattern.split()) > 1 and pattern in message:
                 return response
 
     return (
         "Sorry, I don't understand that topic yet.\n\n"
         "Try asking about:\n"
-        "- variables\n"
-        "- data types\n"
-        "- loops\n"
-        "- functions\n"
-        "- lists\n"
-        "- tuples\n"
-        "- sets\n"
-        "- dictionaries\n"
-        "- modules\n"
-        "- packages"
+        "- What is Python\n"
+        "- Variables\n"
+        "- Data Types\n"
+        "- Loops\n"
+        "- Functions\n"
+        "- Lists\n"
+        "- Tuples\n"
+        "- Sets\n"
+        "- Dictionaries\n"
+        "- Modules\n"
+        "- Packages"
     )
