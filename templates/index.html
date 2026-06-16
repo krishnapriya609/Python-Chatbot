@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyTutor Bot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>PyTutor</h2>
+        <p>Python Learning Chatbot</p>
+
+        <h3>Quick Questions</h3>
+
+        <form method="POST">
+            <button type="submit" name="message" value="What is python">What is Python?</button>
+
+            <button type="submit" name="message" value="Variable">Variable</button>
+
+            <button type="submit" name="message" value="data types">Data Types</button>
+
+            <button type="submit" name="message" value="for loop">For Loop</button>
+
+            <button type="submit" name="message" value="while loop">While Loop</button>
+
+            <button type="submit" name="message" value="function">Functions</button>
+
+            <button type="submit" name="message" value="list">List</button>
+
+            <button type="submit" name="message" value="tuple">Tuple</button>
+
+            <button type="submit" name="message" value="dictionary">Dictionary</button>
+
+            <button type="submit" name="message" value="module">Module</button>
+
+            <button type="submit" name="message" value="package">Package</button>
+        </form>
+    </div>
+
+    <div class="chat-section">
+
+        <div class="header">
+            <h1>PyTutor Assistant</h1>
+        </div>
+
+        <div class="chat-bot" id="chat-bot">
+
+            <div class="bot-message">
+                Hello Student! I am your Python Tutor.
+            </div>
+
+            {% for chat in chats %}
+
+                <div class="user-message">
+                    {{ chat.user }}
+                </div>
+
+                <div class="bot-message">
+                    {{ chat.bot }}
+                </div>
+
+            {% endfor %}
+
+            <div id="bottom"></div>
+
+        </div>
+
+        <script>
+            location.href = "#bottom";
+        </script>
+
+        <form method="POST" class="input-area">
+
+            <input
+                type="text"
+                name="message"
+                placeholder="Ask Python questions..."
+                required
+            >
+
+            <button type="submit">Send</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
