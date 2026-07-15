@@ -1,0 +1,195 @@
+{
+  "intents": [
+
+    {
+      "patterns": ["hello", "hi" , "hai"],
+      "response": "Hello Student! Welcome to PyTutor Bot."
+    },
+
+    {
+      "patterns": ["how are you" , "who are you" , "what is your name" , "tell me about you" , "your details" , "your personal details" , "are you human" , "where do you live" , "your age"],
+      "response": "I am PyTutor Assistant, a Python learning chatbot. I cannot share personal details, but I can help you learn Python programming."
+    },
+
+    {
+      "patterns": ["what is python","python","explain python"],
+      "response": "Python is a high-level interpreted programming language."
+    },
+
+    {
+      "patterns": ["what is variable","variable"],
+      "response": "Variable is used to store data values."
+    },
+
+    {
+      "patterns": ["what are variable rules","what is variable rule","variable rules"],
+      "response": "Variable names can contain letters, numbers and underscore. They cannot start with numbers."
+    },
+
+    {
+      "patterns": ["what are data types","which are data types","data types"],
+      "response": "Main data types are int, float, string, list, tuple, set and dictionary."
+    },
+
+    {
+      "patterns": ["what is integer","integer"],
+      "response": "Integer stores whole numbers. Example: x = 10"
+    },
+
+    {
+      "patterns": ["what is integer","float"],
+      "response": "Float stores decimal numbers. Example: price = 10.5"
+    },
+
+    {
+      "patterns": ["what is string","string"],
+      "response": "String stores text values. Example: name = 'Python'"
+    },
+
+    {
+      "patterns": ["what is boolean","boolean"],
+      "response": "Boolean stores True or False values."
+    },
+
+    {
+      "patterns": ["what is list","list"],
+      "response": "List is an ordered mutable collection. Example: numbers = [1,2,3]"
+    },
+
+    {
+      "patterns": ["what is tuple","tuple"],
+      "response": "Tuple is an ordered immutable collection. Example: data = (1,2,3)"
+    },
+
+    {
+      "patterns": ["what is set","set"],
+      "response": "Set is an unordered collection of unique values."
+    },
+
+    {
+      "patterns": ["what is dictionary","dictionary"],
+      "response": "Dictionary stores key-value pairs. Example: student = {'name':'John'}"
+    },
+
+    {
+      "patterns": ["what is operators","operators"],
+      "response": "Python operators include arithmetic, assignment, comparison, logical and bitwise operators."
+    },
+
+    {
+      "patterns": ["what us if statement","if statement"],
+      "response": "If statement is used for decision making."
+    },
+
+    {
+      "patterns": ["what us if else","if else"],
+      "response": "If else is used to execute alternate conditions."
+    },
+
+    {
+      "patterns": ["what is nested if","nested if"],
+      "response": "Nested if means if statement inside another if statement."
+    },
+
+    {
+      "patterns": ["what is loop","loop"],
+      "response": "A loop is a control structure that repeatedly executes a specific block of code as long as a specified condition remains true"
+    },
+
+    {
+      "patterns": ["what is for loop","for loop"],
+      "response": "For loop repeats code for a fixed sequence."
+    },
+
+    {
+      "patterns": ["what is while loop","while loop"],
+      "response": "While loop executes until condition becomes false."
+    },
+
+    {
+      "patterns": ["what is break","what is break statement","break statement"],
+      "response": "Break statement terminates loop execution."
+    },
+
+    {
+      "patterns": ["what is continue","what is continue statement","continue statement"],
+      "response": "Continue skips current iteration and moves to next iteration."
+    },
+
+    {
+      "patterns": ["what is function","function"],
+      "response": "Function is a reusable block of code."
+    },
+
+    {
+      "patterns": ["show function syntax","function syntax"],
+      "response": "Syntax:\\ndef function_name():\\n    statements"
+    },
+
+    {
+      "patterns": ["what is argument","arguments"],
+      "response": "Arguments are values passed into functions."
+    },
+
+    {
+      "patterns": ["what is return","what is return statement","return statement"],
+      "response": "Return statement sends value back from function."
+    },
+
+    {
+      "patterns": ["what is modules","module"],
+      "response": "Module is a Python file containing functions and variables."
+    },
+
+    {
+      "patterns": ["what is packages","package"],
+      "response": "Package is a collection of modules."
+    },
+
+    {
+      "patterns": ["what is file handling","file handling"],
+      "response": "File handling is used to read and write files."
+    },
+
+    {
+      "patterns": ["what is exception","what is exception handling","exception handling"],
+      "response": "Exception handling manages runtime errors using try and except."
+    },
+
+    {
+      "patterns": ["what is class","class"],
+      "response": "Class is a blueprint for creating objects."
+    },
+
+    {
+      "patterns": ["what is object","object"],
+      "response": "Object is an instance of a class."
+    },
+
+    {
+      "patterns": ["what is inheritance","inheritance"],
+      "response": "Inheritance allows one class to inherit properties from another class."
+    },
+
+    {
+      "patterns": ["what is polymorphism","polymorphism"],
+      "response": "Polymorphism allows same method name with different behaviors."
+    },
+
+    {
+      "patterns": ["what is encapsulation","encapsulation"],
+      "response": "Encapsulation binds data and methods together."
+    },
+
+    {
+      "patterns": ["what is constructor","constructor"],
+      "response": "Constructor initializes object values automatically."
+    },
+
+    {
+      "patterns": ["ok bye","bye"],
+      "response": "Goodbye Student! Happy Coding."
+    }
+
+  ]
+}

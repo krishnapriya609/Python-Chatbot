@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>PyTutor Bot</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <h2>PyTutor</h2>
+
+            <p>Python Learning Chatbot</p>
+
+            <h3>Quick Questions</h3>
+
+            <form method="POST">
+                <button name="message" value="what is python">
+                    What is Python?
+                </button>
+
+                <button name="message" value="variable">
+                    Variables
+                </button>
+
+                <button name="message" value="data types">
+                    Data Types
+                </button>
+
+                <button name="message" value="for loop">
+                    For Loop
+                </button>
+
+                <button name="message" value="while loop">
+                    While Loop
+                </button>
+
+                <button name="message" value="function">
+                    Functions
+                </button>
+
+                <button name="message" value="list">
+                    List
+                </button>
+
+                <button name="message" value="tuple">
+                    Tuple
+                </button>
+
+                <button name="message" value="dictionary">
+                    Dictionary
+                </button>
+
+                <button name="message" value="module">
+                    Module
+                </button>
+
+                <button name="message" value="package">
+                    Package
+                </button>
+            </form>
+
+        </div>
+
+        <div class="chat-section">
+
+            <div class="header">
+
+                <h1>PyTutor Assistant</h1>
+
+            </div>
+
+            <div class="chat-box" id="chat-box">
+
+                <div class="bot-message">
+
+                    Hello Student! I'm Your Python Tutor.
+
+                </div>
+
+                {% for chat in chats %}
+
+                    <div class="user-message">
+
+                        {{ chat.user }}
+
+                    </div>
+
+                    <div class="bot-message">
+
+                        {{ chat.bot }}
+
+                    </div>
+
+                {% endfor %}
+
+                <div id="bottom"></div>
+
+            </div>
+            <script>
+
+                location.href = "#bottom";
+            
+            </script>
+
+            <form method="POST" class="input-area">
+
+                <input
+                    type="text"
+                    name="message"
+                    placeholder="Ask Python questions..."
+                    required
+                >
+
+                <button type="submit">
+
+                    Send
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
